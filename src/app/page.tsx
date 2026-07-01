@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
-export default function Home() {
-  const posts = getAllPosts();
+export default async function Home() {
+  const posts = await getAllPosts();
 
   return (
     <main className="page">
@@ -15,7 +15,9 @@ export default function Home() {
         {posts.map((post) => (
           <Link key={post.slug} href={`/posts/${post.slug}`} className="post-card">
             <h2 className="post-card-title">{post.title}</h2>
-            <time className="post-card-date">{post.date}</time>
+            <time className="post-card-date">
+              {post.createdAt.toISOString().slice(0, 10)}
+            </time>
             <p className="post-card-excerpt">{post.excerpt}</p>
           </Link>
         ))}
