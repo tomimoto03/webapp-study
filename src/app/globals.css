@@ -195,3 +195,99 @@ main {
   line-height: 1.9;
   color: var(--foreground);
 }
+
+/* Post card wrapper */
+.post-card-wrapper {
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Admin form */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.admin-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-input {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  background: var(--card-bg);
+  color: var(--foreground);
+  outline: none;
+}
+
+.admin-input:focus {
+  border-color: var(--accent);
+}
+
+.admin-textarea {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  background: var(--card-bg);
+  color: var(--foreground);
+  outline: none;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.admin-textarea:focus {
+  border-color: var(--accent);
+}
+
+.admin-button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.admin-button:hover {
+  opacity: 0.85;
+}
+
+.admin-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-error {
+  color: #ef4444;
+  font-size: 14px;
+}
